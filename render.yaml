@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: blog-validator
+    env: python
+    buildCommand: |
+      bash install_chrome.sh
+      pip install -r requirements.txt
+    startCommand: python blog_validator_web.py
